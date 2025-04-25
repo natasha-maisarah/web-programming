@@ -5,6 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>404 | Home</title>
     <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        nav.container{
+            padding: 15px;
+        }
+
+        .blog {
+        position: relative;
+        display: inline-block;
+        }
+
+        .blog-sublist {
+        display: none;
+        position: absolute;
+        background-color: var(--primary);
+        min-width: 180px;
+        z-index: 1;
+        border-radius: 5px;
+        }
+
+        .blog-sublist a {
+        color: white;
+        padding: 10px 15px;
+        display: block;
+        text-decoration: none;
+        }
+
+        .blog-sublist a:hover {
+        background-color: var(--hover);
+        }
+
+        .blog:hover .blog-sublist {
+        display: block;
+        }
+    </style>
 </head>
 
 <body>
@@ -14,7 +50,14 @@
               <a  class="active" href="index.html">Home</a>
               <a href="about.html">About Me</a>
               <a href="project.html">Projects</a>
-              <a href="blog.html">Blog</a>
+              <div class="blog">
+                <a href="#">Blog</a>
+                <div class="blog-sublist">
+                  <a href="blog-arinah.html">Arinah's Blog</a>
+                  <a href="blog-farah.html">Farah's Blog</a>
+                  <a href="blog-natasha.html">Natasha's Blog</a>
+                </div>
+              </div>
             </nav>
           </header>
 
