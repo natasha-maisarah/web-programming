@@ -94,10 +94,9 @@ border-radius: 8px;
   .hero {
     text-align: center;
     padding: 5rem 1rem;
-    background-image: url('../images/batik-pattern.png'); /* Add a batik pattern bg */
     background-size: cover;
     background-position: center;
-    color: white;
+    color: rgb(137, 136, 61);
   }
   
   .hero h1 {
