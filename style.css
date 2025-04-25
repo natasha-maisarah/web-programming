@@ -1,0 +1,214 @@
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  :root {
+    --primary: #31572c;      /* deep green */
+    --secondary: #a24936;    /* maroon/red clay */
+    --accent: #e6ccb2;       /* warm beige */
+    --background: #fdfcf8;   /* light cream */
+    --text: #2d2d2d;
+    --hover: #52734d;
+  }
+     
+  header {
+    margin: 15px;
+    border-radius: 100px;
+    padding: 8px 0;
+    background-color: var(--primary);
+  }
+  
+  nav {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+  }
+  
+  nav a:hover,
+  nav a.active {
+    color: var(--accent);
+    border-bottom: 2px solid var(--accent);
+  }
+
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+    line-height: 1.7;
+    font-size: 16px;
+  }
+
+  main.home {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.home-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+}
+
+.home-text {
+    max-width: 400px;
+}
+
+.home-text h2 {
+    font-size: 25px;
+}
+
+.home-text h1 {
+    font-size: 120px;
+    letter-spacing: 20px;
+}
+
+.home-image img {
+max-width: 400px;
+border-radius: 8px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem 1rem;
+  }
+  
+  /* Hero Section */
+  .hero {
+    text-align: center;
+    padding: 5rem 1rem;
+    background-image: url('../images/batik-pattern.png'); /* Add a batik pattern bg */
+    background-size: cover;
+    background-position: center;
+    color: white;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .hero .btn {
+    padding: 0.8rem 1.5rem;
+    background-color: var(--secondary);
+    color: white;
+    border: none;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+  }
+  
+  .hero .btn:hover {
+    background-color: var(--hover);
+  }
+  
+  /* Section Titles */
+  .section-title {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    color: var(--primary);
+    border-left: 5px solid var(--secondary);
+    padding-left: 1rem;
+  }
+  
+  /* Project Grid */
+  .grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 1.5rem;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  }
+  
+  .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  }
+  
+  .card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+  }
+  
+  .card h3 {
+    color: var(--secondary);
+    margin-bottom: 0.5rem;
+  }
+  
+  .card p {
+    font-size: 0.95rem;
+  }
+  
+  .card .btn {
+    margin-top: 1rem;
+    display: inline-block;
+    background-color: var(--primary);
+    color: white;
+    padding: 0.6rem 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+  }
+  
+  .card .btn:hover {
+    background-color: var(--hover);
+  }
+  
+  /* Footer */
+  footer {
+    background-color: var(--primary);
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 3rem;
+    font-size: 0.9rem;
+  }
+  
+  /* Responsive Tweaks */
+  @media (max-width: 768px) {
+    nav {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  
+    .hero h1 {
+      font-size: 2.2rem;
+    }
+  
+    .section-title {
+      font-size: 1.8rem;
+    }
+  }

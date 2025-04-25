@@ -5,110 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>404 | Home</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-
-        body {
-            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-            background-color: #e6ccb2;
-        }
-
-        .home-container {
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-
-        header {
-            margin: 20px;
-            border-radius: 100px;
-            background-color: #31572c;
-            color: white;
-            padding: 15px 0;
-        }
-
-        nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-        }
-
-        nav ul li {
-            margin: 0 15px;
-        }
-
-        nav ul li a {
-            color: #fdfcf8;
-            text-decoration: none;
-            font-size: 18px;
-        }
-
-        nav ul li a:hover {
-            color: #a24936;
-        }
-
-        nav ul li a.active {
-            color: #a24936;
-        }
-
-        main {
-            flex: 1; /* Takes up remaining space between header and footer */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
-
-        .content {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 20px;
-            text-align: center;
-        }
-
-        .text {
-            max-width: 400px;
-        }
-
-        .text h2 {
-            font-size: 25px;
-        }
-
-        .text h1 {
-            font-size: 120px;
-            letter-spacing: 20px;
-        }
-
-        .image img {
-        max-width: 400px;
-        border-radius: 8px;
-        }
-
-        footer {
-            background-color: #31572c;
-            color: #fdfcf8;
-            text-align: center;
-            padding: 10px 0;
-        }
-
-    </style>
 </head>
+
 <body>
     <div class="home-container">
         <header>
+            <nav class="container">
+              <a  class="active" href="index.html">Home</a>
+              <a href="about.html">About Me</a>
+              <a href="project.html">Projects</a>
+              <a href="blog.html">Blog</a>
+            </nav>
+          </header>
 
-        </header>
-
-        <main>
-            <section class="content">
-                <div class="text">
+        <main class="home">
+            <section class="home-content">
+                <div class="home-text">
                     <h2>Welcome to Our Group Website!</h2>
                     <h1>404</h1>
                     <h2>This is where we introduce our journey in Web Programming.</h2>
                 </div>
-                <div class="image">
+                <div class="home-image">
                     <img src="batik.jpg" alt="Batik Motive" />
                 </div>
             </section>
