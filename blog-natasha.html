@@ -1,162 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404 | Home</title>
+    <title>404 | Natasha's Blog</title>
     <link rel="stylesheet" href="style.css">
-<style>
-
-.moodboard-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-  margin: 20px;
-}
-
-.moodboard-container > div {
-  text-align: center;
-  padding: 10px;
-}
-
-.moodboard-title {
-  grid-column: span 3;
-  margin-bottom: 10px;
-}
-
-.moodboard-title h2 {
-    text-align: center;
-    font-size: 28px;
-    color: var(--secondary);
-    margin: 0;
-}
-
-.pic-frame {
-  position: relative;
-  grid-column: span 2;
-  grid-row: span 2;
-  width: 100%;
-  height: 100%;
-  margin: auto;
-  margin-left: 20px;
-  border-radius: 10px;
-  background-color: var(--accent);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  border: 2px solid var(--primary);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-
-.pic-frame img {
-  max-width: 100%;
-  max-height: 300px;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
-.img-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 45px;
-  height: 45px;
-  background-color: var(--primary);
-  color: var(--background);
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
-  font-size: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background-color 0.3s ease;
-  z-index: 2;
-}
-
-.img-btn:hover {
-  background-color: var(--hover);
-}
-
-.prev-btn {
-  left: 10px;
-}
-
-.next-btn {
-  right: 10px;
-}
-
-.outer-circle {
-  border-radius: 50%;
-  width: 50%;
-  aspect-ratio: 1/1;
-  margin: auto;
-  margin-top: 0;
-  margin-bottom: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--secondary);
-}
-
-.inner-circle {
-  border-radius: 100%;
-  width: 40%;
-  height: 40%;
-  margin: auto;
-  background-color: var(--accent);
-}
-
-.current-playlist {
-  background-color: var(--accent);
-  border-radius: 15px;
-  margin: auto;
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-  width:80%;
-}
-
-.current-playlist h3 {
-  font-size: 20px;
-  color: var(--secondary);
-  margin-bottom: 15px;
-  text-align: center;
-  width: 100%;
-}
-
-ul.song-list {
-  width: 100%;
-  padding-left: 0;
-}
-
-ul.song-list li {
-  list-style-type: none;
-  font-size: 15px;
-  margin-bottom: 10px;
-  padding: 5px 12px;
-  border-radius: 8px;
-  transition: background-color 0.3s ease;
-}
-
-ul.song-list li:hover {
-  background-color: var(--hover);
-  color: var(--background);
-}
-
-ul.song-list li a {
-  text-decoration: none;
-  color: var(--text);
-  display: block;
-  width: 100%;
-  text-align: left;
-}
-</style>
+    <link rel="stylesheet" href="script.js">
 </head>
+
 <body>
     <header>
         <nav class="container">
@@ -175,61 +26,42 @@ ul.song-list li a {
       </header>
 
       <main>
-        <div class="moodboard-container">
-            <div class="moodboard-title">
-                <h2>Natasha's Moodboard</h2>
-            </div>
+        <section class="pro-natasha">
+            <h2>Hi, I'm Natasha Maisarah</h2>
+            <h1>Welcome to my space</h1>
+            <p>Here's a glimpse into my moodboard — a collection of images, sounds, and little pieces that inspire me every day.</p>
+        </section>
 
+        <div class="divider"></div>
+        
+        <div class="moodboard-container">
             <div class="pic-frame">
               <button class="img-btn prev-btn" onclick="prevImage()">&#8592;</button>
-              <img id="gallery-image" src="https://via.placeholder.com/400x300?text=Image+1" alt="Gallery Image">
+              <img id="gallery-image" src="jigsaw.jpg" alt="Jigsaw Puzzle">
               <button class="img-btn next-btn" onclick="nextImage()">&#8594;</button>
             </div>
             
-            <div class="outer-circle">
-              <div class="inner-circle"></div>
+            <div class="outer-circle" onclick="openSpotify();">
+                <div class="hover-text">Open Spotify</div>
+                .<div class="inner-circle"></div>
             </div>
             
             <div class="current-playlist">
               <h3>Current Playlist</h3>
               <ul class="song-list">
-                <li><a href="">Song 1</a></li>
-                <li><a href="">Song 2</a></li>
-                <li><a href="">Song 3</a></li>
-                <li><a href="">Song 4</a></li>
-                <li><a href="">Song 5</a></li>
+                <li><a href="https://www.youtube.com/watch?v=nTejAxg7byc" target="_blank">Nobody New - The Marías</a></li>
+                <li><a href="https://www.youtube.com/watch?v=dgUHE8wWhiE" target="_blank">Like Him - Tyler, The Creator, Lola Young</a></li>
+                <li><a href="https://www.youtube.com/watch?v=TDVlDUAIz5k" target="_blank">Heaven Can Wait - Michael Jackson</a></li>
+                <li><a href="https://www.youtube.com/watch?v=KFNfB1-sI3g" target="_blank">This Is How It Feels - d4vd, Laufey</a></li>
+                <li><a href="https://www.youtube.com/watch?v=_FY2_jn6l_E" target="_blank">Dreaming Girl - Xdinary Heroes</a></li>
               </ul>
             </div>
 
           </div>
       </main>
-<footer>
-    <p>&copy; 2025 Group 404</p>
-</footer>
-<script>
-const images = [
-  "https://via.placeholder.com/400x300?text=Image+1",
-  "https://via.placeholder.com/400x300?text=Image+2",
-  "https://via.placeholder.com/400x300?text=Image+3",
-  "https://via.placeholder.com/400x300?text=Image+4"
-];
 
-let currentIndex = 0;
-
-function showImage() {
-  document.getElementById('gallery-image').src = images[currentIndex];
-}
-
-function nextImage() {
-  currentIndex = (currentIndex + 1) % images.length;
-  showImage();
-}
-
-function prevImage() {
-  currentIndex = (currentIndex - 1 + images.length) % images.length;
-  showImage();
-}
-</script>
-
+    <footer>
+        <p>&copy; 2025 Group 404</p>
+    </footer>
 </body>
 </html>
