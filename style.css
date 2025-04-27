@@ -533,3 +533,20 @@ header .logo {
   margin: 20px auto;
   border-radius: 2px;
 }
+.final-note {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 20px;
+  text-align: center;
+  color: #555;
+}
+.final-note h2 {
+  font-size: 28px;
+  color: #188384;
+  margin-bottom: 20px;
+}
+.final-note p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #666;
+}
