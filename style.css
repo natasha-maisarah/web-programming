@@ -509,3 +509,27 @@ header .logo {
 .card2-content a:hover {
   background-color: #555;
 }
+
+/*Farah's blog*/
+
+.fblog{
+  background: #ffffff;
+  color: rgb(8, 43, 36);
+  text-align: center;
+  padding: 40px 20px 20px 20px;
+}
+.fblog h1{
+  margin: 0;
+  font-size: 36px;
+}
+.fblog p{
+  margin-top: 10px;
+  font-size: 18px;
+}
+.divider{
+  width: 80px;
+  height: 4px;
+  background: #000000;
+  margin: 20px auto;
+  border-radius: 2px;
+}
