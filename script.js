@@ -1,8 +1,8 @@
 const images = [
-    "guitar.jpg",
-    "strawberry-matcha.jpg",
-    "notis.jpg",
-    "jigsaw.jpg"
+    "/assets/guitar.jpg",
+    "/assets/strawberry-matcha.jpg",
+    "/assets/notis.jpg",
+    "/assets/jigsaw.jpg"
   ];
   
   let currentIndex = 0;
