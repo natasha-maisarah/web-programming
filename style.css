@@ -1,7 +1,5 @@
 /*Body, header, footer */
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
   }
   
@@ -244,7 +242,7 @@ footer {
   }
   
   /* Natasha's Blog */
-  .divider {
+  .n-divider {
     margin: 100px 50px 100px 50px;
     border-top: 2px solid var(--primary);
     box-shadow: 2px 2px 4px rgba(0,0,0,0.5);
@@ -372,22 +370,6 @@ footer {
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
 
-.hover-text {
-  position: absolute;
-  font-size: 14px;
-  color: var(--background);
-  background-color: var(--primary);
-  padding: 5px 10px;
-  border-radius: 20px;
-  transition: opacity 0.3s ease;
-  pointer-events: none;
-  position: absolute;
-}
-
-.outer-circle:hover .hover-text {
-  transform: translateX(-50%) translateY(0);
-}
-
 .current-playlist {
   background-color: var(--accent);
   box-shadow: 2px 2px 4px rgba(0,0,0,0.5);
@@ -472,10 +454,12 @@ header .logo {
   flex-wrap: wrap;
   margin-top: 30px;
 }
+
 .card2 {
   background: white;
   width: 300px;
   margin: 15px;
+  padding: 10px;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -509,6 +493,10 @@ header .logo {
 }
 .card2-content a:hover {
   background-color: #555;
+}
+
+#about, #biography, #profiles {
+  margin: 30px;
 }
 
 /*Farah's blog*/
