@@ -43,5 +43,29 @@
     <footer class="container">
         <p>&copy; 2025 Group 404</p>
     </footer>
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyAOsWjXl7TKQqKNLHFS_X9jm5zzh2yAy3Q",
+          authDomain: "the-404-website.firebaseapp.com",
+          projectId: "the-404-website",
+          storageBucket: "the-404-website.firebasestorage.app",
+          messagingSenderId: "223209447820",
+          appId: "1:223209447820:web:af2181eb7d5a0236b876a9",
+          measurementId: "G-KQ2N5PYDE4"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+      </script>
 </body>
 </html>
