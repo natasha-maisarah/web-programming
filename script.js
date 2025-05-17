@@ -25,39 +25,23 @@ const images = [
     window.open("https://spotify.com", '_blank').focus();
   }
 
-  // === FORM SUBMISSION HANDLER ===
-document.addEventListener("DOMContentLoaded", function () {
-  const form = document.getElementById("contactForm");
+  const form = document.getElementById("myForm");
   const popup = document.getElementById("popup");
+  const overlay = document.getElementById("overlay");
 
-  if (form) {
-    form.addEventListener("submit", function (e) {
-      e.preventDefault(); // prevent default form submission
+  form.addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent full-page navigation
 
-      const formData = new FormData(form);
+    // Simulate form processing (e.g., validation, sending data)
+    // You can use fetch() here for real submissions.
 
-      fetch("submit_form.php", {
-        method: "POST",
-        body: formData,
-      })
-        .then((res) => res.text())
-        .then((data) => {
-          popup.textContent = data;
-          popup.style.display = "block";
+    // Show popup
+    popup.style.display = "block";
+    overlay.style.display = "block";
+  });
 
-          setTimeout(() => {
-            popup.style.display = "none";
-          }, 3000);
-
-          form.reset(); // optional: clear form
-        })
-        .catch((err) => {
-          popup.textContent = "There was an error. Please try again.";
-          popup.style.display = "block";
-          setTimeout(() => {
-            popup.style.display = "none";
-          }, 3000);
-        });
-    });
+  function closePopup() {
+    popup.style.display = "none";
+    overlay.style.display = "none";
+    form.reset(); // Optional: reset form fields
   }
-});
