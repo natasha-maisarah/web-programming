@@ -28,20 +28,40 @@ const images = [
   const form = document.getElementById("myForm");
   const popup = document.getElementById("popup");
   const overlay = document.getElementById("overlay");
+  const popupMessage = document.getElementById("popup-message");
 
   form.addEventListener("submit", function(event) {
-    event.preventDefault(); // Prevent full-page navigation
+    event.preventDefault(); // Stop form from submitting normally
 
-    // Simulate form processing (e.g., validation, sending data)
-    // You can use fetch() here for real submissions.
+    const formData = new FormData(form);
 
-    // Show popup
-    popup.style.display = "block";
-    overlay.style.display = "block";
+    // Send data using fetch (POST request)
+    fetch('submit_form.php', {
+      method: 'POST',
+      body: formData
+    })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+      return response.text(); // or response.json()
+    })
+    .then(data => {
+      // Show success popup
+      popupMessage.textContent = "Form submitted successfully!";
+      popup.style.display = "block";
+      overlay.style.display = "block";
+      form.reset(); // Clear form fields
+    })
+    .catch(error => {
+      // Handle errors
+      popupMessage.textContent = "Error: " + error.message;
+      popup.style.display = "block";
+      overlay.style.display = "block";
+    });
   });
 
   function closePopup() {
     popup.style.display = "none";
     overlay.style.display = "none";
-    form.reset(); // Optional: reset form fields
   }
